@@ -9,6 +9,16 @@
 #include <iostream>
 using namespace std;
 
+
+double square(double x){
+	return x*x;
+}
+
+void print_square(double x){
+	cout << "the square of " << x << " is " << square(x) << endl;
+}
+
+
 int main() {
 	cout << "!!!Hello World!!!" << endl;
 	cout << "We must stand it until humans put their foot on mars!" << endl;
@@ -26,5 +36,14 @@ int main() {
     cout << "After swapping." << endl;
     cout << "Now the first became = " << first << ", and the second becomes = " << second << endl;
 
+    cout << "call the print square function " << endl;
+    print_square(1.234);
+
 	return 0;
 }
+
+
+
+
+
+
