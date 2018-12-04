@@ -23,7 +23,7 @@ int main() {
     first = second;
     second = temp;
 
-    cout << "\nAfter swapping." << endl;
+    cout << "After swapping." << endl;
     cout << "Now the first became = " << first << ", and the second becomes = " << second << endl;
 
 	return 0;
