@@ -16,7 +16,7 @@ int main() {
 
 	auto ai = 2;
 
-	cout << ai;
+	cout << ai+b;
 
 
 	return 0;
