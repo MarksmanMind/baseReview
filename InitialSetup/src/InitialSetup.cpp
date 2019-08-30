@@ -11,7 +11,7 @@ using namespace std;
 
 
 int main() {
-
+	cout << "Haaloy i'gan' Worold!" << endl;
 	const int b = 4;
 
 	auto ai = 2;
@@ -20,6 +20,7 @@ int main() {
 
 
 	return 0;
+
 }
 
 
