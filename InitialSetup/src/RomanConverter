@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+
+class RomanConverter{
+    public:
+    string maxAllowedValue = "3999";
+    string calcNumber(int);
+};
+
+string RomanConverter::calcNumber(int decimal){
+    bool romanNinehundred = 0, romanFivehundred = 0, romanFourhundred = 0, romanFifty = 0, romanForty = 0; 
+    short romanThousand = 0, romanHundred = 0, romanTen = 0;
+    string generatedRoman = 0, generatedEnd = 0;
+    if (decimal <= 3999 && decimal >= 0){
+    for (;decimal > 999; decimal =- 1000){
+        generatedRoman =+ "M";
+    }
+    if (decimal > 899){
+        generatedRoman =+ "CM";
+        decimal =- 900;
+    }
+    if (decimal > 499){
+        generatedRoman =+ "D";
+        decimal =- 500;
+    }
+    if (decimal > 399){
+        generatedRoman =+ "CD";
+        decimal =- 400;
+    }
+    for (;decimal > 99; decimal =- 100){
+        generatedRoman =+ "C";
+    }
+    if (decimal > 89){
+        generatedRoman =+ "XC";
+        decimal =- 90;
+    }
+    if (decimal > 49){
+        generatedRoman =+ "L";
+        decimal =- 50;
+    }
+    if (decimal > 39){
+        generatedRoman =+ "XL";
+        decimal =- 40;
+    }
+    for (;decimal > 9; decimal =- 10){
+        generatedRoman =+ "X";
+    }
+    switch (decimal)
+    {
+    case 9:
+        generatedRoman =+ "IX";
+        break;
+    case 8:
+        generatedRoman =+ "VIII";
+        break;
+    case 7:
+        generatedRoman =+ "VII";
+        break;
+    case 6:
+        generatedRoman =+ "VI";
+        break;
+    case 5:
+        generatedRoman =+ "V";
+        break;
+    case 4:
+        generatedRoman =+ "IV";
+        break;
+    case 3:
+        generatedRoman =+ "III";
+        break;
+    case 2:
+        generatedRoman =+ "II";
+        break;
+    case 1:
+        generatedRoman =+ "I";
+        break;
+    case 0:
+        generatedRoman =+ "N";
+        break;
+    default:
+        generatedRoman =+ "The code failed to run!";
+        break;
+    };
+return generatedRoman;
+    }
+    return "The number must be from zero to three thousand nine hundred & ninety nine.";
+}
